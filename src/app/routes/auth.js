@@ -40,7 +40,7 @@ module.exports = function(app,passport){
         productosModel
 		.obtenerProd()
 		.then(productos => {
-			res.render("productos", {
+			res.render("Productos", {
                 productos: productos,
                 user: req.user,
 			});
