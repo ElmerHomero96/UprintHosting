@@ -3,7 +3,7 @@ const conexion = require("./connection.js");
 module.exports = {
     obtenerProd(){
         return new Promise((resolve, reject) => {
-            conexion.query(`SELECT * FROM productos`,
+            conexion.query(`SELECT * FROM productos ORDER BY idCategory`,
                 (err, resultados) => {
                     if (err) reject(err);
                     else resolve(resultados);
